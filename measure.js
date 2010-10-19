@@ -15,6 +15,8 @@ function removeElement(id){
 
 function removeToolbar(){
 removeElement("measure-toolbar")
+removeElement("measure-toolbar-css")
+removeElement("measure-toolbar-js")
 }
 
 
