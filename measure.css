@@ -1,27 +1,27 @@
 #measure-toolbar{
-position:fixed;
-right:0;
-top:0;
-width:100px;
-height:100px;
-background-color:#444444;
--moz-border-radius-bottomleft:5px;
-font-size:11px;
-color:#FFFFFF;
-font-family:Verdana,sans-serif;
+    position:fixed;
+    right:0;
+    top:0;
+    width:100px;
+    height:100px;
+    background-color:#444444;
+    -moz-border-radius-bottomleft:5px;
+    font-size:11px;
+    color:#FFFFFF;
+    font-family:Verdana,sans-serif;
+    z-index:999999;
+    margin: 0;
+    padding: 0;
 }
-
 #measure-toolbar-header{
-padding:2px 7px;
-float:left;
+    padding:2px 7px;
+    float:left;
 }
-
 #measure-toolbar-close{
-padding:2px 7px;
-text-align:right;
-float:right;
+    padding:2px 7px;
+    text-align:right;
+    float:right;
 }
-
 #measure-toolbar-close a{
-color:#FFFFFF;
+    color:#FFFFFF;
 }
