@@ -36,15 +36,10 @@ measurebookmarklet = (function(){
         headID.appendChild(cssNode);
     };
 
-
-    
     loadToolbar = function (){
         if (!document.getElementById("measure-toolbar")){
             loadCSS('measure-toolbar-css', 'http://localhost:8000/measure.css');
-        }
 
-
-        if (!document.getElementById("measure-toolbar")){
             var measureToolbar = document.createElement('div');
             measureToolbar.id = "measure-toolbar";
             document.body.appendChild(measureToolbar);
@@ -53,8 +48,16 @@ measurebookmarklet = (function(){
         }
         
         document.onmousemove = function(e) {
-	        var x = e.pageX,
+	        var x = 0,
+		        y = 0;
+		    if(e.pageX){
+		        x = e.pageX;
 		        y = e.pageY;
+		    }
+		    else{ 
+		        x = event.clientX + document.body.scrollLeft;
+                y = event.clientY + document.body.scrollTop;
+            }
             document.getElementById("measure-toolbar-xvalue").innerHTML = x;
             document.getElementById("measure-toolbar-yvalue").innerHTML = y;
         };
